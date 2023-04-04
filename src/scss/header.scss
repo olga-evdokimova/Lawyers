@@ -1,7 +1,10 @@
 //====================================================================================================
 .header {
-	padding-top: 34px;
+	height: 120px;
+	display: flex;
+	z-index: 100;
 	&__wrap {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -25,7 +28,6 @@
 		> li:hover .sub-nav__list {
 			display: block;
 		}
-
 	}
 	li {
 		position: relative;
