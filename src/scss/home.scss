@@ -90,6 +90,15 @@
     background-color: #fff;
     color: #07002c;
     margin-right: 55px;
+    transition: all 0.2s ease 0s;
+    @media (any-hover: hover) and (any-pointer: fine) {
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: #fff;
+            transition: all 0.2s ease 0s;
+        }
+    }
 }
 
 .services__btn {
@@ -101,6 +110,28 @@
     text-align: center;
     border: 3px solid #fff;
     border-radius: 15px;
+    transition: all 0.2s ease 0s;
+    position: relative;
+
+    &::before {
+        display: none;
+        font-size: 50px;
+        position: absolute;
+        right: 60px;
+        transition: all 0.2s ease 0s;
+    }
+    @media (any-hover: hover) and (any-pointer: fine) {
+        &:hover,
+        &:focus {
+            &::before {
+                display: block;
+                text-indent: 0;
+                transition: all 0.2s ease 0s;
+            }
+            text-indent: -60px;
+            transition: all 0.2s ease 0s;
+        }
+    }
 }
 
 //====================================================================================================
