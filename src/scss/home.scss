@@ -20,7 +20,6 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-
         img {
             max-width: 100%;
         }
@@ -30,7 +29,8 @@
         font-weight: 400;
         font-size: 48px;
         line-height: 53px;
-        letter-spacing: 0.165em
+        letter-spacing: 0.165em;
+        white-space: nowrap;
     }
     &__list {
         padding-left: 60px;
@@ -60,15 +60,16 @@
     position: absolute;
     left: -100px;
     top: -30px;
-    width: 459px;
+    max-width: 459px;
     img {
         max-width: 100%;
     }
 }
 .first-02 {
     position: absolute;
-    width: 294px;
+    max-width: 294px;
     right: -40px;
+
     img {
         max-width: 100%;
     }
