@@ -74,13 +74,13 @@
 		}
 	}
 	&__link {
-		color: #07002c;
+		color: $color;
 		font-weight: 700;
 		transition: all 0.2s ease 0s;
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover,
 			&:focus {
-				border-bottom: 1px solid #07002c;
+				border-bottom: 1px solid $color;
 				transition: all 0.2s ease 0s;
 			}
 		}
@@ -102,7 +102,7 @@
 		&:hover,
 		&:focus {
 			background-color: #fff;
-			color: #07002c;
+			color: $color;
 			transition: all 0.2s ease 0s;
 		}
 	}
