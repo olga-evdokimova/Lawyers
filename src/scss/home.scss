@@ -4,20 +4,28 @@
         position: absolute;
         top: -230px;
         left: -160px;
-        // top: 0;
-        // left: 0;
         z-index: -1;
+        @media (max-width: 960px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &__wrap {
         height: 100%;
         display: flex;
         justify-content: space-between;
         position: relative;
+        @media (max-width: 960px) {
+            justify-content: center;
+        }
     }
     &__img {
         position: relative;
         width: 100%;
-
+        @media (max-width: 960px) {
+            display: none;
+        }
         img {
             position: absolute;
             bottom: 0;
@@ -36,16 +44,22 @@
     &__title {
         font-family: "Forum;";
         font-weight: 400;
-        // font-size: 48px;
-        // text-align: end;
-        line-height: 48px;
+        line-height: 1;
         letter-spacing: 0.165em;
         white-space: nowrap;
         @include adaptiveValue("font-size", 48, 10);
-        // padding-top: 35px;
-        @include adaptiveValue(" padding-top",35 ,0 );
-        @media (max-width: 1140px){
-       transform: translateX(-24px);
+        @include adaptiveValue("padding-top", 35, 0);
+        @media (max-width: 1140px) {
+            transform: translateX(-24px);
+        }
+        @media (max-width: 960px) {
+            transform: translateX(0);
+            padding-top: 35px;
+            font-size: 28px;
+        }
+        @media (max-width: 480px){
+            font-size: 19px;
+           
         }
     }
     &__list {
@@ -53,21 +67,33 @@
         @include adaptiveValue("padding-top", 47, 14);
         @include adaptiveValue("padding-bottom", 60, 30);
         @include adaptiveValue("padding-left", 60, -80);
+        background-image: url(../img/first/logo-bg-first.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (max-width: 960px) {
+            padding: 24px 0 30px 0px;
+            ul {
+                // padding-left: 0px;
+            }
+        }
         li {
             padding-left: 30px;
             padding-bottom: 31px;
             position: relative;
-            // font-size: rem(18);
             @include adaptiveValue("font-size", 18, 5);
+            @media (max-width: 960px) {
+                font-size: 14px;
+                padding-bottom: 21px;
+            }
+            @media (max-width: 480px){
+                font-size: 10px;
+            }
             font-weight: 600;
             &::before {
                 position: absolute;
                 left: 0;
             }
         }
-        background-image: url(../img/first/logo-bg-first.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
     }
     &__btn {
         // font-size: rem(20);
@@ -76,6 +102,14 @@
         display: flex;
         padding-top: 29px;
         @include adaptiveValue("font-size", 20, 12);
+        @media (max-width: 960px) {
+            justify-content: center;
+            padding-top: 8px;
+        }
+        @media (max-width: 480px){
+            flex-direction: column;
+            align-items: center;
+        }
         a {
             // width: 257px;
             @include adaptiveValue("width", 257, 180);
@@ -106,6 +140,10 @@
             }
             @media (max-width: 960px) {
                 margin-right: 52px;
+
+            }
+            @media (max-width: 480px){
+                margin: 0 0 30px 0 ;
             }
         }
 
