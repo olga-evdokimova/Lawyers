@@ -56,7 +56,9 @@
                 left: 0;
             }
         }
-      
+        background-image: url(../img/first/logo-bg-first.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     &__btn {
         // font-size: rem(20);
