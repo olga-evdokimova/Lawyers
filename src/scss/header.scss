@@ -3,6 +3,9 @@
 	height: 120px;
 	display: flex;
 	z-index: 100;
+	@media (max-width: 1140px) {
+		height: 76px;
+	}
 	&__wrap {
 		width: 100%;
 		display: flex;
@@ -11,43 +14,132 @@
 	}
 }
 .logo {
+	width: 118px;
+	@media (max-width: 1140px) {
+	order: -1;
+	}
+	@media (max-width: 480px) {
+		width: 100px;
+	}
 }
 .nav {
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 22px;
+	@media (max-width: 1140px) {
+		position: fixed;
+		right: -100%;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		overflow: auto;
+		backdrop-filter: blur(10px);
+		z-index: 4;
+		display: flex;
+		justify-content: flex-end;
+		transition: right 0.5s ease 0s;
+	}
+	.menu-open & {
+		right: 0;
+		transition: right 0.5s ease 0s;
+	}
 	&__list {
 		display: flex;
+		@media (max-width: 1140px) {
+			display: block;
+			background: $color;
+			width: 260px;
+			padding: 111px 40px 40px 40px;
+			font-size: 14px;
+			position: relative;
+			&::before{
+				content: "";
+				background-image: url(../img/logo-header.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100px;
+				height: 46px;
+				position: absolute;
+				top: 15px;
+				left: 15px;
+			}
+		}
 		li:not(:last-child) {
 			padding-right: 30px;
+			@media (max-width: 1140px) {
+				padding-right: 0;
+			}
 		}
 		> li:nth-child(2) {
 			padding-right: 24px;
 			margin-right: 30px;
+			span {
+				position: absolute;
+				top: 2px;
+				right: -2px;
+				cursor: pointer;
+				&::before{
+					font-size: 13px;
+					padding: 5px;
+					@media (max-width: 1140px){
+						display: none;
+					}
+				}
+			}
+			@media (max-width: 1140px) {
+				padding-right: 0;
+				margin-right: 0;
+			}
 		}
-		> li:hover .sub-nav__list {
-			display: block;
-		}
+	
 	}
+
 	li {
 		position: relative;
+		@media (max-width: 1140px) {
+			padding-bottom: 20px;
+		}
 	}
-	&__item {
-	}
-	&__link {
+
+	a {
 		&::before {
 			position: absolute;
 			right: 0;
 			top: 7px;
 			font-size: 12px;
+			@media (max-width: 1140px) {
+				display: none;
+			}
 		}
 		transition: all 0.2s ease 0s;
 		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover,
-			&:focus {
+			&:hover {
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;
 			}
+		}
+	}
+
+	&__policy {
+		display: none;
+		font-size: 10px;
+		font-weight: 600;
+		line-height: 1.2;
+		margin: 60px 10px 0 10px;
+		text-align: center;
+		border-bottom: 1px solid $mainColor;
+		@media (max-width: 1140px) {
+			display: block;
+		}
+	}
+	&__copy {
+		display: none;
+		font-size: 10px;
+		font-weight: 600;
+		text-align: center;
+		margin-top: 21px;
+		@media (max-width: 1140px) {
+			display: block;
 		}
 	}
 }
@@ -69,6 +161,9 @@
 	&__item {
 		height: 40px;
 		padding: 10px 19px;
+		@media (max-width: 1140px) {
+			padding: 0;
+		}
 		&:first-child {
 			border-bottom: 2px solid #dadada;
 		}
@@ -76,14 +171,10 @@
 	&__link {
 		color: $color;
 		font-weight: 700;
-		transition: all 0.2s ease 0s;
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover,
-			&:focus {
-				border-bottom: 1px solid $color;
-				transition: all 0.2s ease 0s;
-			}
+		@media (max-width: 1140px) {
+			color: $mainColor;
 		}
+
 	}
 }
 
@@ -106,57 +197,67 @@
 			transition: all 0.2s ease 0s;
 		}
 	}
+	@media (max-width: 1140px) {
+	order: -1;
+	}
+	@media (max-width: 767px){
+		display: none;
+	}
 }
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	position: relative;
+	width: rem(30);
+	height: rem(19);
+	margin-left: rem(20);
+	cursor: pointer;
+	z-index: 5;
+	@media (max-width: 1140px) {
 		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
+	}
+
+	span,
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		right: 0;
+		position: absolute;
+		height: rem(3);
+		background-color: $mainColor;
+		border-radius: rem(46);
+	}
+	&::before {
+		top: 0;
+		width: 100%;
+	}
+	&::after {
+		bottom: 0;
+		width: 100%;
+	}
+	span {
+		top: calc(50% - rem(1));
+		width: 67%;
+	}
+
+	.menu-open & {
 		span {
-			top: calc(50% - rem(1));
+			opacity: 0;
 		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
+
+		&::before {
+			top: calc(50% - 1px);
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+			width: 100%;
+			bottom: 8px;
 		}
 	}
 }
-*/
