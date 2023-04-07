@@ -1,143 +1,138 @@
 //====================================================================================================
 .first {
+    position: relative;
+    padding-top: 35px;
+    //overflow: hidden;
     height: 600px;
-    overflow: hidden;
     &__wrap {
         display: flex;
         justify-content: space-between;
     }
-    &__images {
+    &__img {
         position: relative;
-        width: 500px;
-    }
-    &__content {
-        position: relative;
-        padding-top: 37px;
-        display: flex;
-        flex-direction: column;
-    }
-    &__bg {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 100%;
+
         img {
+            position: absolute;
+            top: -42px;
+            left: 0;
             max-width: 100%;
         }
     }
+    svg {
+        position: absolute;
+        top: -170px;
+        left: -40px;
+        z-index: -1;
+    }
+    &__content {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+    }
+
     &__title {
         font-family: "Forum;";
         font-weight: 400;
-        font-size: 48px;
-        line-height: 53px;
+        // font-size: 48px;
+        // text-align: end;
+        line-height: 48px;
         letter-spacing: 0.165em;
         white-space: nowrap;
+        @include adaptiveValue("font-size", 48, 10);
     }
     &__list {
-        padding-left: 60px;
-        padding-top: 47px;
-        padding-bottom: 59px;
+        padding: 47px 0 60px 60px;
         li {
             padding-left: 30px;
             padding-bottom: 31px;
             position: relative;
-            font-size: rem(18);
+            // font-size: rem(18);
+            @include adaptiveValue("font-size", 18, 5);
             font-weight: 600;
             &::before {
                 position: absolute;
                 left: 0;
             }
         }
+      
     }
     &__btn {
-        font-size: rem(20);
+        // font-size: rem(20);
         font-weight: 600;
         line-height: 24px;
         display: flex;
         padding-top: 29px;
-    }
-}
-.first-01 {
-    position: absolute;
-    left: -100px;
-    top: -30px;
-    max-width: 459px;
-    img {
-        max-width: 100%;
-    }
-}
-.first-02 {
-    position: absolute;
-    max-width: 294px;
-    right: -40px;
-
-    img {
-        max-width: 100%;
-    }
-}
-.first-bg {
-    width: 900px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    z-index: -1;
-    img {
-        max-width: 100%;
-    }
-}
-
-.consult__btn {
-    width: 257px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #fff;
-    border-radius: 15px;
-    background-color: #fff;
-    color: $color;
-    margin-right: 55px;
-    transition: all 0.2s ease 0s;
-    @media (any-hover: hover) and (any-pointer: fine) {
-        &:hover,
-        &:focus {
-            background-color: transparent;
-            color: #fff;
-            transition: all 0.2s ease 0s;
+        @include adaptiveValue("font-size", 20, 12);
+        a {
+            // width: 257px;
+            @include adaptiveValue("width", 257, 180);
+            // height: 70px;
+            @include adaptiveValue("height", 70, 50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid $mainColor;
+            border-radius: 15px;
+            @media (max-width: 960px) {
+                border: 2px solid $mainColor;
+                border-radius: 10px;
+            }
         }
-    }
-}
+        &-consult {
+            background-color: #fff;
+            color: $color;
+            margin-right: 55px;
+            transition: all 0.2s ease 0s;
+            @media (any-hover: hover) and (any-pointer: fine) {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: #fff;
+                    transition: all 0.2s ease 0s;
+                }
+            }
+            @media (max-width: 960px) {
+                margin-right: 52px;
+            }
+        }
 
-.services__btn {
-    width: 257px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 3px solid #fff;
-    border-radius: 15px;
-    transition: all 0.2s ease 0s;
-    position: relative;
+        &-services {
+            text-align: center;
+            transition: all 0.2s ease 0s;
+            position: relative;
 
-    &::before {
-        display: none;
-        font-size: 50px;
-        position: absolute;
-        right: 60px;
-        transition: all 0.2s ease 0s;
-    }
-    @media (any-hover: hover) and (any-pointer: fine) {
-        &:hover,
-        &:focus {
             &::before {
-                display: block;
-                text-indent: 0;
+                display: none;
+                font-size: 50px;
+                position: absolute;
+                right: 60px;
                 transition: all 0.2s ease 0s;
             }
-            text-indent: -60px;
-            transition: all 0.2s ease 0s;
+            @media (any-hover: hover) and (any-pointer: fine) {
+                &:hover,
+                &:focus {
+                    &::before {
+                        display: block;
+                        text-indent: 0;
+                        transition: all 0.2s ease 0s;
+                    }
+                    text-indent: -60px;
+                    transition: all 0.2s ease 0s;
+                }
+            }
         }
     }
 }
+
+//Элипс за списком
+// .first-bg {
+//     width: 800px;
+//     position: absolute;
+//     top: 0;
+//     left: -10px;
+//     z-index: -1;
+// }
 
 //====================================================================================================
