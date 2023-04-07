@@ -10,7 +10,7 @@
         color: $color;
         font-weight: 600;
         margin-top: 58px;
-        @media (max-width: 1080px) {
+        @media (max-width: 767px) {
             flex-direction: column;
         }
     }
@@ -21,11 +21,13 @@
         flex-direction: column;
         align-items: flex-start;
         @media (max-width: 1080px) {
-            align-items: center;
+            padding: 30px 20px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 960px) {
             font-size: 12px;
-            padding: 40px 30px;
+        }
+        @media (max-width: 767px) {
+            align-items: center;
         }
         a ~ a {
             margin-top: 30px;
@@ -48,6 +50,9 @@
     &__logo {
         margin: 21px;
         max-width: 240px;
+        @media (max-width: 960px) {
+            margin: 21px 0;
+        }
         @media (max-width: 480px) {
             margin: 0px 15px;
         }
@@ -60,11 +65,13 @@
         display: flex;
         flex-direction: column;
         @media (max-width: 1080px) {
-            align-items: center;
+            padding: 30px 20px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 960px) {
             font-size: 12px;
-            padding: 40px 30px;
+        }
+        @media (max-width: 767px) {
+            align-items: center;
         }
         a ~ a {
             margin-top: 30px;
@@ -86,6 +93,12 @@
     &__copy {
         text-align: center;
         padding: 58px 30px 83px;
+        @media (max-width: 960px){
+            padding: 58px 30px 50px;
+        }
+        @media (max-width: 480px){
+            padding: 30px 30px 50px;
+        }
     }
 }
 
