@@ -6,47 +6,64 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230406111410">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230407212858">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container header__wrap">
 				<a class="logo" href="#"><picture><source srcset="img/logo-header.webp" type="image/webp"><img src="img/logo-header.png" alt="logo" /></picture></a>
-				<nav class="nav" title="">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#" class="nav__link ">Главная</a></li>
-						<li class="nav__item "><a href="#" class="nav__link _icon-form-drop-down">О партнёрстве</a>
-							<ul class="sub-nav__list">
-								<li class="sub-nav__item"><a href="#" class="sub-nav__link">Дипломы</a></li>
-								<li class="sub-nav__item"><a href="#" class="sub-nav__link">Документы</a></li>
+
+				<button type="button" class="icon-menu"><span></span></button>
+				<nav class="nav">
+					<ul class="nav__list block">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">О партнёрстве</a><span class="dropdown _icon-form-drop-down"></span>
+							<ul class="sub-nav__list dropdown-list">
+								<li class="sub-nav__item" data-da=".block,1140,2"><a href="#" class="sub-nav__link">Дипломы</a>
+								</li>
+								<li class="sub-nav__item" data-da=".block,1140,2"><a href="#" class="sub-nav__link">Документы</a></li>
 							</ul>
 						</li>
-						<li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Мероприятия</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Мероприятия</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Контакты</a></li>
+						<a class="nav__policy" href="#">Политика конфиденциальности</a>
+						<div class="nav__copy">© 2023</div>
 					</ul>
+
 				</nav>
-				<div class=phone><a href="tel:++79104344004">+7 (910) 434-40-04</a></div>
+				<div class="phone"><a href="tel:++79104344004">+7 (910) 434-40-04</a></div>
 			</div>
 		</header>
+
+
 		<main class="page">
 			<section class="first">
-				<div class="first-bg"><picture><source srcset="img/first/first-bg.webp" type="image/webp"><img src="img/first/first-bg.png" alt=""></picture></div>
 				<div class="first__wrap __container">
-					<div class="first__images">
-						<div class="first-02"><picture><source srcset="img/first/first-02.webp" type="image/webp"><img src="img/first/first-02.png" alt=""></picture></div>
-						<div class="first-01"><picture><source srcset="img/first/first-01.webp" type="image/webp"><img src="img/first/first-01.png" alt=""></picture></div>
+					<svg width="940" height="940" viewBox="0 0 940 940" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g filter="url(#filter0_f_2307_22546)">
+							<circle cx="470" cy="470" r="293" fill="#0A94E2" fill-opacity="0.8" />
+						</g>
+						<defs>
+							<filter id="filter0_f_2307_22546" x="0" y="0" width="940" height="940" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+								<feFlood flood-opacity="0" result="BackgroundImageFix" />
+								<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+								<feGaussianBlur stdDeviation="88.5" result="effect1_foregroundBlur_2307_22546" />
+							</filter>
+						</defs>
+					</svg>
+					<div class="first__img">
+						<picture><source srcset="img/first/partners.webp" type="image/webp"><img src="img/first/partners.png" alt=""></picture>
 					</div>
-
 					<div class="first__content">
-						<div class="first__bg"><picture><source srcset="img/first/logo-bg-first.webp" type="image/webp"><img src="img/first/logo-bg-first.png" alt=""></picture></div>
-						<h1 class="first__title">Юридическое партнерство</h1>
+						<h1 class="first__title">Юридическое партнёрство</h1>
 						<div class="first__list">
 							<ul>
 								<li class="_icon-check-mark">Абонентское обслуживание ИП и юридических лиц
@@ -62,8 +79,8 @@
 								<li class="_icon-check-mark">Досудебное (медиация) и судебное разрешение споров</li>
 							</ul>
 							<div class="first__btn">
-								<a href="#" class="consult__btn">Нужна консультация</a>
-								<a href="#" class="services__btn _icon-arrow-white">Услуги</a>
+								<a href="#" class="first__btn-consult">Нужна консультация</a>
+								<a href="#" class="first__btn-services _icon-arrow-white">Услуги</a>
 							</div>
 						</div>
 
@@ -73,6 +90,20 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__wrap">
+					<div class="footer__info">
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Публичная оферта</a>
+					</div>
+					<div class="footer__logo">
+						<picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt=""></picture>
+					</div>
+					<div class="footer__dev">
+						<a href="#">Дизайн сайта: Николай Саламов</a>
+						<a href="#">Разработчик: Ольга Евдокимова</a>
+					</div>
+				</div>
+				<div class="footer__copy">© 2023</div>
 			</div>
 		</footer>
 	</div>
@@ -88,7 +119,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20230406111410"></script>
+	<script src="js/app.min.js?_v=20230407212858"></script>
 </body>
 
 </html>
