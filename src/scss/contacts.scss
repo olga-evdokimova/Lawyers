@@ -1,0 +1,84 @@
+.contacts {
+    &__wrap {
+        background-image: url(../img/contacts/logo-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 100px;
+        padding-bottom: 97px;
+        position: relative;
+        svg {
+            position: absolute;
+            right: -300px;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &__sub-title {
+        font-size: 29px;
+        font-weight: 700;
+        text-align: center;
+        padding: 60px 10px 97px;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 50px;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+.phone {
+    background-image: url(../img/contacts/phone-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/phone-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
+.watsapp {
+    background-image: url(../img/contacts/whatsapp-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/whatsapp-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
+.telegram {
+    background-image: url(../img/contacts/telegram-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/telegram-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
+.tenchat {
+    background-image: url(../img/contacts/tenchat-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/tenchat-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
+.vk {
+    background-image: url(../img/contacts/VK-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/VK-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
+.email {
+    background-image: url(../img/contacts/email-icon.svg);
+    &:hover {
+        background-image: url(../img/contacts/email-hover.svg);
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+    }
+}
