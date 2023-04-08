@@ -39,8 +39,19 @@
             border-bottom: 1px solid $color;
             transition: all 0.2s ease 0s;
             @media (min-width: 1025px) {
-                &:hover,
-                &:focus, &:active {
+                &:hover{
+                      &:active {
+                    transform: scale(1.1);
+                    transition: all 0.2s ease 0s;
+                }
+                }
+                &:focus{
+                      &:active {
+                    transform: scale(1.1);
+                    transition: all 0.2s ease 0s;
+                }
+                }
+                &:active {
                     transform: scale(1.1);
                     transition: all 0.2s ease 0s;
                 }
@@ -82,8 +93,15 @@
         a {
             transition: all 0.2s ease 0s;
             @media (min-width: 1025px) {
-                &:hover,
-                &:focus, &:active {
+                &:hover{
+                    transform: scale(1.1);
+                    transition: all 0.2s ease 0s;
+                }
+                &:focus{
+                    transform: scale(1.1);
+                    transition: all 0.2s ease 0s;
+                }
+                &:active {
                     transform: scale(1.1);
                     transition: all 0.2s ease 0s;
                 }
@@ -93,10 +111,10 @@
     &__copy {
         text-align: center;
         padding: 58px 30px 83px;
-        @media (max-width: 960px){
+        @media (max-width: 960px) {
             padding: 58px 30px 50px;
         }
-        @media (max-width: 480px){
+        @media (max-width: 480px) {
             padding: 30px 30px 50px;
         }
     }

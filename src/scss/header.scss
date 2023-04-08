@@ -16,7 +16,7 @@
 .logo {
 	width: 118px;
 	@media (max-width: 1140px) {
-	order: -1;
+		order: -1;
 	}
 	@media (max-width: 480px) {
 		width: 100px;
@@ -52,7 +52,7 @@
 			padding: 111px 40px 40px 40px;
 			font-size: 14px;
 			position: relative;
-			&::before{
+			&::before {
 				content: "";
 				background-image: url(../img/logo-header.png);
 				background-repeat: no-repeat;
@@ -78,10 +78,10 @@
 				top: 2px;
 				right: -2px;
 				cursor: pointer;
-				&::before{
+				&::before {
 					font-size: 13px;
 					padding: 5px;
-					@media (max-width: 1140px){
+					@media (max-width: 1140px) {
 						display: none;
 					}
 				}
@@ -91,7 +91,6 @@
 				margin-right: 0;
 			}
 		}
-	
 	}
 
 	li {
@@ -113,7 +112,15 @@
 		}
 		transition: all 0.2s ease 0s;
 		@media (min-width: 1025px) {
-			&:hover, &:focus, &:active {
+			&:hover{
+				transition: all 0.2s ease 0s;
+				border-bottom: 1px solid #fff;
+			}
+			&:focus{
+				transition: all 0.2s ease 0s;
+				border-bottom: 1px solid #fff;
+			}
+			&:active {
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;
 			}
@@ -174,7 +181,6 @@
 		@media (max-width: 1140px) {
 			color: $mainColor;
 		}
-
 	}
 }
 
@@ -189,18 +195,27 @@
 	border-radius: 10px;
 	border: 1px solid #fff;
 	transition: all 0.2s ease 0s;
-	@media (min-width: 1025px) {
-		&:hover,
-		&:focus, &:active{
+	@media (any-hover: hover) and (any-pointer: fine) {
+		&:hover{
+			background-color: #fff;
+			color: $color;
+			transition: all 0.2s ease 0s;
+		}
+		&:focus{
+			background-color: #fff;
+			color: $color;
+			transition: all 0.2s ease 0s;
+		}
+		&:active {
 			background-color: #fff;
 			color: $color;
 			transition: all 0.2s ease 0s;
 		}
 	}
 	@media (max-width: 1140px) {
-	order: -1;
+		order: -1;
 	}
-	@media (max-width: 767px){
+	@media (max-width: 767px) {
 		display: none;
 	}
 }
