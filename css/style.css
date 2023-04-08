@@ -383,7 +383,7 @@ body {
     display: none;
   }
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .nav a:hover, .nav a:focus, .nav a:active {
     transition: all 0.2s ease 0s;
     border-bottom: 1px solid #fff;
@@ -464,7 +464,7 @@ body {
   border: 1px solid #fff;
   transition: all 0.2s ease 0s;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .phone:hover, .phone:focus, .phone:active {
     background-color: #fff;
     color: #07002C;
@@ -579,7 +579,7 @@ body {
   border-bottom: 1px solid #07002C;
   transition: all 0.2s ease 0s;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .footer__info a:hover, .footer__info a:focus, .footer__info a:active {
     transform: scale(1.1);
     transition: all 0.2s ease 0s;
@@ -633,7 +633,7 @@ body {
 .footer__dev a {
   transition: all 0.2s ease 0s;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .footer__dev a:hover, .footer__dev a:focus, .footer__dev a:active {
     transform: scale(1.1);
     transition: all 0.2s ease 0s;
@@ -894,7 +894,7 @@ body {
   margin-right: 55px;
   transition: all 0.2s ease 0s;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .first__btn-consult:hover, .first__btn-consult:focus, .first__btn-consult:active {
     background-color: transparent;
     color: #fff;
@@ -923,7 +923,7 @@ body {
   right: 60px;
   transition: all 0.2s ease 0s;
 }
-@media (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 1025px) {
   .first__btn-services:hover, .first__btn-services:focus, .first__btn-services:active {
     text-indent: -60px;
     transition: all 0.2s ease 0s;
