@@ -38,14 +38,10 @@
         a {
             border-bottom: 1px solid $color;
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine)  {
-                &:hover, &:focus,  &:active{
-                      &:active {
-                    transform: scale(1.1);
-                    transition: all 0.2s ease 0s;
-                }
-                }
-              
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease 0s;
             }
         }
     }
@@ -83,12 +79,10 @@
         }
         a {
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine)  {
-                &:hover,  &:focus, &:active{
-                    transform: scale(1.1);
-                    transition: all 0.2s ease 0s;
-                }
-               
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease 0s;
             }
         }
     }
