@@ -137,7 +137,7 @@
             color: $color;
             margin-right: 55px;
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine) {
+            @media (min-width: 1025px) {
                 &:hover,
                 &:focus,&:active {
                     background-color: transparent;
@@ -166,7 +166,7 @@
                 right: 60px;
                 transition: all 0.2s ease 0s;
             }
-            @media (any-hover: hover) and (any-pointer: fine) {
+            @media (min-width: 1025px) {
                 &:hover,
                 &:focus, &:active {
                     &::before {

@@ -38,7 +38,7 @@
         a {
             border-bottom: 1px solid $color;
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine) {
+            @media (min-width: 1025px) {
                 &:hover,
                 &:focus, &:active {
                     transform: scale(1.1);
@@ -81,7 +81,7 @@
         }
         a {
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine) {
+            @media (min-width: 1025px) {
                 &:hover,
                 &:focus, &:active {
                     transform: scale(1.1);

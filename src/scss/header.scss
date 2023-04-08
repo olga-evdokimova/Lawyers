@@ -112,7 +112,7 @@
 			}
 		}
 		transition: all 0.2s ease 0s;
-		@media (any-hover: hover) and (any-pointer: fine) {
+		@media (min-width: 1025px) {
 			&:hover, &:focus, &:active {
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;
@@ -189,7 +189,7 @@
 	border-radius: 10px;
 	border: 1px solid #fff;
 	transition: all 0.2s ease 0s;
-	@media (any-hover: hover) and (any-pointer: fine) {
+	@media (min-width: 1025px) {
 		&:hover,
 		&:focus, &:active{
 			background-color: #fff;
