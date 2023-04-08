@@ -139,7 +139,7 @@
             transition: all 0.2s ease 0s;
             @media (any-hover: hover) and (any-pointer: fine) {
                 &:hover,
-                &:focus {
+                &:focus,&:active {
                     background-color: transparent;
                     color: #fff;
                     transition: all 0.2s ease 0s;
@@ -168,7 +168,7 @@
             }
             @media (any-hover: hover) and (any-pointer: fine) {
                 &:hover,
-                &:focus {
+                &:focus, &:active {
                     &::before {
                         display: block;
                         text-indent: 0;

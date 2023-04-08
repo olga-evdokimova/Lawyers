@@ -113,7 +113,7 @@
 		}
 		transition: all 0.2s ease 0s;
 		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover {
+			&:hover, &:focus, &:active {
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;
 			}
@@ -191,7 +191,7 @@
 	transition: all 0.2s ease 0s;
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover,
-		&:focus {
+		&:focus, &:active{
 			background-color: #fff;
 			color: $color;
 			transition: all 0.2s ease 0s;
