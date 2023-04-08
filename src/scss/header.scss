@@ -111,7 +111,7 @@
 			}
 		}
 		transition: all 0.2s ease 0s;
-		@media (min-width: 1025px) {
+		@media (any-hover: hover) and (any-pointer: fine)  {
 			&:hover{
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;

@@ -134,7 +134,7 @@
             color: $color;
             margin-right: 55px;
             transition: all 0.2s ease 0s;
-            @media (min-width: 1025px) {
+            @media (any-hover: hover) and (any-pointer: fine)  {
                 &:hover{
                   background-color: transparent;
                     color: #fff;
@@ -171,7 +171,7 @@
                 right: 60px;
                 transition: all 0.2s ease 0s;
             }
-            @media (min-width: 1025px) {
+            @media (any-hover: hover) and (any-pointer: fine)  {
                 &:hover {
                     &::before {
                         display: block;
