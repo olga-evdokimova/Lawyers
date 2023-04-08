@@ -134,10 +134,6 @@
   box-sizing: border-box;
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
 html,
 body {
   height: 100%;
@@ -383,7 +379,7 @@ body {
     display: none;
   }
 }
-@media (min-width: 1025px) {
+@media (any-hover: hover) and (any-pointer: fine) {
   .nav a:hover, .nav a:focus, .nav a:active {
     transition: all 0.2s ease 0s;
     border-bottom: 1px solid #fff;
@@ -394,7 +390,7 @@ body {
   font-size: 10px;
   font-weight: 600;
   line-height: 1.2;
-  margin: 60px 10px 0 10px;
+  margin: 60px 8px 0 8px;
   text-align: center;
   border-bottom: 1px solid #fff;
 }
@@ -464,7 +460,7 @@ body {
   border: 1px solid #fff;
   transition: all 0.2s ease 0s;
 }
-@media (min-width: 1025px) {
+@media (any-hover: hover) and (any-pointer: fine) {
   .phone:hover, .phone:focus, .phone:active {
     background-color: #fff;
     color: #07002C;
@@ -579,8 +575,8 @@ body {
   border-bottom: 1px solid #07002C;
   transition: all 0.2s ease 0s;
 }
-@media (min-width: 1025px) {
-  .footer__info a:hover, .footer__info a:focus, .footer__info a:active {
+@media (any-hover: hover) and (any-pointer: fine) {
+  .footer__info a:hover:active, .footer__info a:focus:active, .footer__info a:active:active {
     transform: scale(1.1);
     transition: all 0.2s ease 0s;
   }
@@ -633,7 +629,7 @@ body {
 .footer__dev a {
   transition: all 0.2s ease 0s;
 }
-@media (min-width: 1025px) {
+@media (any-hover: hover) and (any-pointer: fine) {
   .footer__dev a:hover, .footer__dev a:focus, .footer__dev a:active {
     transform: scale(1.1);
     transition: all 0.2s ease 0s;
