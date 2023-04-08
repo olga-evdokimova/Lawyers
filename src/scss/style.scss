@@ -80,8 +80,9 @@ body {
 
 .title{
 	font-weight: 900;
-	font-size: 48px;
-	padding: 100px 0 50px;
+	@include adaptiveValue("padding-top",100 ,50 );
+	@include adaptiveValue("padding-bottom",50 ,30 );
+	@include adaptiveValue("font-size",48 ,18 );
 }
 
 
