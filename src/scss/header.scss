@@ -111,15 +111,9 @@
 			}
 		}
 		transition: all 0.2s ease 0s;
-		@media (any-hover: hover) and (any-pointer: fine)  {
-			&:hover{
-				transition: all 0.2s ease 0s;
-				border-bottom: 1px solid #fff;
-			}
-			&:focus{
-				transition: all 0.2s ease 0s;
-				border-bottom: 1px solid #fff;
-			}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover,
+			&:focus,
 			&:active {
 				transition: all 0.2s ease 0s;
 				border-bottom: 1px solid #fff;
@@ -196,16 +190,8 @@
 	border: 1px solid #fff;
 	transition: all 0.2s ease 0s;
 	@media (any-hover: hover) and (any-pointer: fine) {
-		&:hover{
-			background-color: #fff;
-			color: $color;
-			transition: all 0.2s ease 0s;
-		}
-		&:focus{
-			background-color: #fff;
-			color: $color;
-			transition: all 0.2s ease 0s;
-		}
+		&:hover,
+		&:focus,
 		&:active {
 			background-color: #fff;
 			color: $color;

@@ -11,7 +11,7 @@
             transform: translate(-50%, -50%);
             width: 800px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 480px){
             width: 600px;
             top: 180px;
         }
@@ -62,8 +62,9 @@
             padding-top: 35px;
             font-size: 28px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 480px){
             font-size: 19px;
+           
         }
     }
     &__list {
@@ -75,6 +76,7 @@
         background-repeat: no-repeat;
         @media (max-width: 960px) {
             padding: 24px 0 30px 0px;
+          
         }
         li {
             padding-left: 60px;
@@ -92,14 +94,15 @@
                 padding-bottom: 21px;
                 padding-left: 55px;
             }
-            @media (max-width: 480px) {
+            @media (max-width: 480px){
                 font-size: 10px;
                 padding-left: 30px;
-                &::before {
+                &::before{
                     font-size: 19px;
                 }
             }
             font-weight: 600;
+            
         }
     }
     &__btn {
@@ -112,7 +115,7 @@
             justify-content: center;
             padding-top: 8px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: 480px){
             flex-direction: column;
             align-items: center;
         }
@@ -134,18 +137,9 @@
             color: $color;
             margin-right: 55px;
             transition: all 0.2s ease 0s;
-            @media (any-hover: hover) and (any-pointer: fine)  {
-                &:hover{
-                  background-color: transparent;
-                    color: #fff;
-                    transition: all 0.2s ease 0s;  
-                }
-                &:focus{
-                    background-color: transparent;
-                    color: #fff;
-                    transition: all 0.2s ease 0s;
-                }
-                &:active {
+            @media (min-width: 1025px) {
+                &:hover,
+                &:focus,&:active {
                     background-color: transparent;
                     color: #fff;
                     transition: all 0.2s ease 0s;
@@ -153,9 +147,10 @@
             }
             @media (max-width: 960px) {
                 margin-right: 52px;
+
             }
-            @media (max-width: 480px) {
-                margin: 0 0 30px 0;
+            @media (max-width: 480px){
+                margin: 0 0 30px 0 ;
             }
         }
 
@@ -171,26 +166,9 @@
                 right: 60px;
                 transition: all 0.2s ease 0s;
             }
-            @media (any-hover: hover) and (any-pointer: fine)  {
-                &:hover {
-                    &::before {
-                        display: block;
-                        text-indent: 0;
-                        transition: all 0.2s ease 0s;
-                    }
-                    text-indent: -60px;
-                    transition: all 0.2s ease 0s;
-                }
-                &:focus {
-                    &::before {
-                        display: block;
-                        text-indent: 0;
-                        transition: all 0.2s ease 0s;
-                    }
-                    text-indent: -60px;
-                    transition: all 0.2s ease 0s;
-                }
-                &:active {
+            @media (min-width: 1025px) {
+                &:hover,
+                &:focus, &:active {
                     &::before {
                         display: block;
                         text-indent: 0;
@@ -203,5 +181,7 @@
         }
     }
 }
+
+
 
 //====================================================================================================
