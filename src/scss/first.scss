@@ -151,13 +151,15 @@
             text-align: center;
             transition: all 0.2s ease 0s;
             position: relative;
-
             &::before {
                 display: none;
                 font-size: 50px;
                 position: absolute;
                 right: 60px;
                 transition: all 0.2s ease 0s;
+                @media (max-width: 960px){
+                    font-size: 30px;
+                }
             }
 
             &:hover {
