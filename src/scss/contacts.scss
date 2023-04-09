@@ -23,8 +23,6 @@
         }
     }
     &__sub-title {
-        @include adaptiveValue("font-size", 29, 14);
-        font-weight: 700;
         text-align: center;
         padding: 60px 10px 97px;
         @media (max-width: 767px) {
