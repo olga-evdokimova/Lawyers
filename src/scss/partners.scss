@@ -4,7 +4,8 @@
     border-radius: 35px;
     background-color: $mainColor;
     position: relative;
-    z-index: -1;
+    @include adaptiveValue("padding-bottom", 100, 50);
+    @include adaptiveValue("padding-top", 100, 50);
     &::after {
         content: "";
         position: absolute;
@@ -12,17 +13,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 35px;
-        opacity: 0.3;
+        opacity: 0.2;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        z-index: -1;
     }
     h2 {
         color: $color;
     }
     &__title-g {
+        padding-bottom: 30px;
     }
     &__banner {
         background: $color;
@@ -58,6 +59,10 @@
         z-index: 2;
     }
     &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 142px 0 147px;
     }
     &__subtitle {
         font-weight: 700;
@@ -67,7 +72,10 @@
         color: $color;
     }
     &__items {
+        display: flex;
+        flex-direction: column;
     }
+
     &__items-item {
         padding: 40px 45px;
         background-color: $mainColor;
@@ -78,6 +86,12 @@
         margin: 25px 0;
         max-width: 700px;
         height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(2n) {
+            transform: translateX(87px);
+        }
         &::after {
             content: "";
             position: absolute;
@@ -103,7 +117,19 @@
     &__more {
         font-weight: 700;
         font-size: 29px;
+        color: $color;
         line-height: 35px;
+        padding-top: 73px;
         text-align: center;
+        span {
+            position: relative;
+            padding-right: 70px;
+        }
+        span::before {
+            font-size: 50px;
+            position: absolute;
+            right: 0;
+            top: -4px;
+        }
     }
 }

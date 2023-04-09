@@ -80,7 +80,7 @@ body {
 .title {
 	font-weight: 900;
 	line-height: 58px;
-	@include adaptiveValue("padding-top", 100, 50);
+	
 	@include adaptiveValue("padding-bottom", 50, 30);
 	@include adaptiveValue("font-size", 48, 18);
 }
