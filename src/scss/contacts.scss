@@ -117,3 +117,14 @@
         transition: all 0.3s ease 0s;
     }
 }
+.wrap {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.content {
+   width: calc(100% + 200px);
+    height: 300px;
+    background-color: red;
+    margin: 0 -100px;
+}
