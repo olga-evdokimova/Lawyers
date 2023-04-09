@@ -220,6 +220,40 @@ body {
   min-width: 0;
 }
 
+.title {
+  font-weight: 900;
+}
+@supports (padding-top: clamp( 3.125rem , 2.0723684211rem  +  5.2631578947vw , 6.25rem )) {
+  .title {
+    padding-top: clamp( 3.125rem , 2.0723684211rem  +  5.2631578947vw , 6.25rem );
+  }
+}
+@supports not (padding-top: clamp( 3.125rem , 2.0723684211rem  +  5.2631578947vw , 6.25rem )) {
+  .title {
+    padding-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
+  }
+}
+@supports (padding-bottom: clamp( 1.875rem , 1.4539473684rem  +  2.1052631579vw , 3.125rem )) {
+  .title {
+    padding-bottom: clamp( 1.875rem , 1.4539473684rem  +  2.1052631579vw , 3.125rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.875rem , 1.4539473684rem  +  2.1052631579vw , 3.125rem )) {
+  .title {
+    padding-bottom: calc(1.875rem + 1.25 * (100vw - 20rem) / 59.375);
+  }
+}
+@supports (font-size: clamp( 1.125rem , 0.4934210526rem  +  3.1578947368vw , 3rem )) {
+  .title {
+    font-size: clamp( 1.125rem , 0.4934210526rem  +  3.1578947368vw , 3rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.4934210526rem  +  3.1578947368vw , 3rem )) {
+  .title {
+    font-size: calc(1.125rem + 1.875 * (100vw - 20rem) / 59.375);
+  }
+}
+
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -535,7 +569,6 @@ body {
   align-items: center;
   color: #07002C;
   font-weight: 600;
-  margin-top: 58px;
 }
 @media (max-width: 767px) {
   .footer__wrap {
@@ -913,6 +946,11 @@ body {
   right: 60px;
   transition: all 0.2s ease 0s;
 }
+@media (max-width: 960px) {
+  .first__btn-services::before {
+    font-size: 30px;
+  }
+}
 .first__btn-services:hover {
   text-indent: -60px;
   transition: all 0.2s ease 0s;
@@ -921,4 +959,166 @@ body {
   display: block;
   text-indent: 0;
   transition: all 0.2s ease 0s;
+}
+
+.contacts__wrap {
+  background-image: url(../img/contacts/logo-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 100px;
+  position: relative;
+}
+@supports (padding-bottom: clamp( 1.5625rem , 0.0467105263rem  +  7.5789473684vw , 6.0625rem )) {
+  .contacts__wrap {
+    padding-bottom: clamp( 1.5625rem , 0.0467105263rem  +  7.5789473684vw , 6.0625rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.5625rem , 0.0467105263rem  +  7.5789473684vw , 6.0625rem )) {
+  .contacts__wrap {
+    padding-bottom: calc(1.5625rem + 4.5 * (100vw - 20rem) / 59.375);
+  }
+}
+@media (max-width: 960px) {
+  .contacts__wrap {
+    background-position: 0 150px;
+  }
+}
+.contacts__wrap svg {
+  position: absolute;
+  right: -300px;
+  top: 0;
+  z-index: -1;
+}
+@media (max-width: 960px) {
+  .contacts__wrap svg {
+    width: 700px;
+    right: -250px;
+    top: -250px;
+    opacity: 0.7;
+  }
+}
+.contacts__sub-title {
+  font-weight: 700;
+  text-align: center;
+  padding: 60px 10px 97px;
+}
+@supports (font-size: clamp( 0.875rem , 0.5592105263rem  +  1.5789473684vw , 1.8125rem )) {
+  .contacts__sub-title {
+    font-size: clamp( 0.875rem , 0.5592105263rem  +  1.5789473684vw , 1.8125rem );
+  }
+}
+@supports not (font-size: clamp( 0.875rem , 0.5592105263rem  +  1.5789473684vw , 1.8125rem )) {
+  .contacts__sub-title {
+    font-size: calc(0.875rem + 0.9375 * (100vw - 20rem) / 59.375);
+  }
+}
+@media (max-width: 767px) {
+  .contacts__sub-title {
+    padding: 10px 10px 50px;
+  }
+}
+.contacts__social {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+@media (max-width: 960px) {
+  .contacts__social {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .contacts__social a:nth-child(1) {
+    margin-left: -35px;
+  }
+  .contacts__social a:nth-child(4) {
+    margin-left: -35px;
+  }
+  .contacts__social a:nth-child(3) {
+    margin-right: -35px;
+  }
+  .contacts__social a:nth-child(6) {
+    margin-right: -35px;
+  }
+}
+.contacts__social-item {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease 0s;
+}
+@supports (margin: clamp( 1.5625rem , 1.0361842105rem  +  2.6315789474vw , 3.125rem )) {
+  .contacts__social-item {
+    margin: clamp( 1.5625rem , 1.0361842105rem  +  2.6315789474vw , 3.125rem );
+  }
+}
+@supports not (margin: clamp( 1.5625rem , 1.0361842105rem  +  2.6315789474vw , 3.125rem )) {
+  .contacts__social-item {
+    margin: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 59.375);
+  }
+}
+@media (max-width: 480px) {
+  .contacts__social-item {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.telephone {
+  background-image: url(../img/contacts/phone-icon.svg);
+}
+.telephone:hover {
+  background-image: url(../img/contacts/phone-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+}
+
+.watsapp {
+  background-image: url(../img/contacts/whatsapp-icon.svg);
+}
+.watsapp:hover {
+  background-image: url(../img/contacts/whatsapp-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+}
+
+.telegram {
+  background-image: url(../img/contacts/telegram-icon.svg);
+}
+.telegram:hover {
+  background-image: url(../img/contacts/telegram-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+}
+
+.tenchat {
+  background-image: url(../img/contacts/tenchat-icon.svg);
+}
+.tenchat:hover {
+  background-image: url(../img/contacts/tenchat-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+}
+
+.vk {
+  background-image: url(../img/contacts/VK-icon.svg);
+}
+.vk:hover {
+  background-image: url(../img/contacts/VK-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+}
+
+.email {
+  background-image: url(../img/contacts/email-icon.svg);
+}
+.email:hover {
+  background-image: url(../img/contacts/email-hover.svg);
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
 }
