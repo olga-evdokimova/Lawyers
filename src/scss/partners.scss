@@ -58,7 +58,6 @@
         }
         img:nth-child(1) {
             max-width: 428px;
-            // @include adaptiveValue("max-width", 428, 300);
             position: absolute;
             left: -75px;
             bottom: 23%;
@@ -70,13 +69,11 @@
         }
         img:nth-child(2) {
             max-width: 600px;
-            // @include adaptiveValue("max-width", 600, 500);
             position: absolute;
             right: -160px;
             bottom: 28%;
             z-index: 3;
             @media (max-width: 1200px) {
-                // right: -200px;
                 max-width: 560px;
             }
         }
@@ -95,26 +92,41 @@
         position: relative;
         overflow: hidden;
         z-index: 5;
-        @media (max-width: 960px){
-              padding: 30px;
+        @media (max-width: 960px) {
+            padding: 30px;
         }
         &::after {
             content: "";
             position: absolute;
-            background-size: cover;
-            background-repeat: no-repeat;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            @include adaptiveValue("width", 374, 156);
+            @include adaptiveValue("height", 374, 156);
+            background: #0aa4d5;
+            filter: blur(187.5px);
+            border-radius: 100%;
             z-index: -1;
         }
     }
     .banner-01 {
-        background-image: url(../img/partners/banner-01.svg);
+        &::after {
+            left: 158px;
+            top: -79px;
+            @media (max-width: 960px) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
     .banner-02 {
-        background-image: url(../img/partners/banner-02.svg);
+        &::after {
+            left: 440px;
+            top: -54px;
+            @media (max-width: 960px) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
     &__text {
         font-weight: 600;
