@@ -51,6 +51,7 @@ $responsiveType: 1;
 body {
 	// Скролл заблокирован
 	background-color: $color;
+	line-height: 1.2;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
@@ -79,17 +80,17 @@ body {
 // заголовки страниц
 .title {
 	font-weight: 900;
-	line-height: 58px;
-	
+	line-height: 1.16;
 	@include adaptiveValue("padding-bottom", 50, 30);
 	@include adaptiveValue("font-size", 48, 18);
 }
 // Серые заголовки большие
 .title-02 {
 	font-weight: 900;
-	font-size: 70px;
+	@include adaptiveValue("font-size", 70, 20);
 	color: rgba(7, 0, 44, 0.1);
-	line-height: 85px;
+	line-height: 1.2;
+	text-align: center;
 }
 // Подзаголовки
 .title-03 {

@@ -1,11 +1,20 @@
 .partners {
-    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
     height: 100%;
     border-radius: 35px;
     background-color: $mainColor;
     position: relative;
-    @include adaptiveValue("padding-bottom", 100, 50);
-    @include adaptiveValue("padding-top", 100, 50);
+    @include adaptiveValue("padding-bottom", 100, 25);
+    @include adaptiveValue("padding-top", 100, 25);
+
+    @media (max-width: 960px) {
+        border-radius: 20px;
+    }
+    @media (max-width: 767px) {
+        border-radius: 15px;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -18,6 +27,59 @@
         left: 0;
         bottom: 0;
         right: 0;
+    }
+    &__images {
+        @media (max-width: 960px) {
+            display: none;
+        }
+        &::before {
+            content: "fffff";
+            background-color: $mainColor;
+            width: 547px;
+            height: 291px;
+            position: absolute;
+            bottom: 17%;
+            left: -123px;
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 4;
+        }
+        &::after {
+            content: "";
+            background-color: $mainColor;
+            width: 508px;
+            height: 251px;
+            position: absolute;
+            bottom: 22%;
+            right: -95px;
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 4;
+        }
+        img:nth-child(1) {
+            max-width: 428px;
+            // @include adaptiveValue("max-width", 428, 300);
+            position: absolute;
+            left: -75px;
+            bottom: 23%;
+            z-index: 3;
+            @media (max-width: 1200px) {
+                left: -135px;
+                max-width: 400px;
+            }
+        }
+        img:nth-child(2) {
+            max-width: 600px;
+            // @include adaptiveValue("max-width", 600, 500);
+            position: absolute;
+            right: -160px;
+            bottom: 28%;
+            z-index: 3;
+            @media (max-width: 1200px) {
+                // right: -200px;
+                max-width: 560px;
+            }
+        }
     }
     h2 {
         color: $color;
@@ -32,7 +94,10 @@
         padding: 40px 50px;
         position: relative;
         overflow: hidden;
-        z-index: 2;
+        z-index: 5;
+        @media (max-width: 960px){
+              padding: 30px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -53,8 +118,7 @@
     }
     &__text {
         font-weight: 600;
-        font-size: 29px;
-        line-height: 35px;
+        @include adaptiveValue("font-size", 29, 14);
         text-align: center;
         z-index: 2;
     }
@@ -62,18 +126,50 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 142px 0 147px;
+        @include adaptiveValue("padding-top", 142, 30);
+        @include adaptiveValue("padding-bottom", 147, 50);
     }
     &__subtitle {
         font-weight: 700;
-        font-size: 29px;
-        line-height: 35px;
+        @include adaptiveValue("font-size", 29, 16);
         text-align: center;
         color: $color;
     }
     &__items {
         display: flex;
         flex-direction: column;
+        &::before {
+            content: "fffff";
+            background: rgba(10, 148, 226, 0.5);
+            filter: blur(187.5px);
+            @include adaptiveValue("width", 699, 254);
+            @include adaptiveValue("height", 699, 254);
+            position: absolute;
+            bottom: 31%;
+            left: -169px;
+            border-radius: 100%;
+            z-index: 2;
+            @media (max-width: 960px) {
+                bottom: 880px;
+                left: -50px;
+            }
+        }
+        &::after {
+            content: "";
+            background: rgba(10, 148, 226, 0.5);
+            filter: blur(187.5px);
+            @include adaptiveValue("width", 699, 254);
+            @include adaptiveValue("height", 699, 254);
+            position: absolute;
+            bottom: 31%;
+            right: -177px;
+            border-radius: 100%;
+            z-index: 2;
+            @media (max-width: 960px) {
+                bottom: 500px;
+                right: -63px;
+            }
+        }
     }
 
     &__items-item {
@@ -82,15 +178,32 @@
         box-shadow: 0px 7px 14px rgba(7, 0, 44, 0.15);
         border-radius: 15px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
         margin: 25px 0;
-        max-width: 700px;
+        width: 700px;
         height: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
-        &:nth-child(2n) {
-            transform: translateX(87px);
+        @media (max-width: 1200px) {
+            width: 600px;
+        }
+        @media (max-width: 960px) {
+            width: 100%;
+            margin: 15px 0;
+            padding: 20px 15px;
+        }
+        &:nth-child(odd) {
+            transform: translateX(43px);
+            @media (max-width: 960px) {
+                transform: translateX(0px);
+            }
+        }
+        &:nth-child(even) {
+            transform: translateX(-43px);
+            @media (max-width: 960px) {
+                transform: translateX(0px);
+            }
         }
         &::after {
             content: "";
@@ -107,8 +220,7 @@
         }
         p {
             font-weight: 600;
-            font-size: 20px;
-            line-height: 24px;
+            @include adaptiveValue("font-size", 20, 14);
             text-align: center;
             color: $color;
             z-index: 2;
@@ -116,20 +228,28 @@
     }
     &__more {
         font-weight: 700;
-        font-size: 29px;
+        @include adaptiveValue("font-size", 29, 14);
         color: $color;
-        line-height: 35px;
-        padding-top: 73px;
+        @include adaptiveValue("margin-top", 73, 50);
         text-align: center;
-        span {
+
+        a {
             position: relative;
-            padding-right: 70px;
+            z-index: 20;
+            @include adaptiveValue("padding-right", 70, 40);
+            &:hover {
+                &::before {
+                    transform: translateX(10px);
+                    transition: all 0.2s ease 0s;
+                }
+            }
         }
-        span::before {
-            font-size: 50px;
+        a::before {
+            @include adaptiveValue("font-size", 54, 30);
             position: absolute;
             right: 0;
-            top: -4px;
+            top: -6px;
+            transition: all 0.2s ease 0s;
         }
     }
 }
