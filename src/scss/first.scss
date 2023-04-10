@@ -1,26 +1,21 @@
 //====================================================================================================
 .first {
-    svg {
-        position: absolute;
-        top: -230px;
-        left: -160px;
-        z-index: -1;
-        @media (max-width: 960px) {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-        }
-        @media (max-width: 480px) {
-            width: 600px;
-            top: 180px;
-        }
-    }
     &__wrap {
         height: 100%;
         display: flex;
         justify-content: space-between;
         position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            @include adaptiveValue("width", 586, 300);
+            @include adaptiveValue("height", 586, 300);
+            left:6px;
+            top: 41px;
+            background: rgba(10, 148, 226, 0.8);
+            filter: blur(88.5px);
+            border-radius: 100%;
+        }
         @media (max-width: 960px) {
             justify-content: center;
         }

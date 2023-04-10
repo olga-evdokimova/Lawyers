@@ -7,20 +7,24 @@
         @include adaptiveValue("padding-bottom", 97, 25);
         @include adaptiveValue("padding-top", 100, 50);
         position: relative;
+        &::before {
+            content: "";
+            background: rgba(10, 148, 226, 0.5);
+            filter: blur(187.5px);
+            @include adaptiveValue("width", 699, 266);
+            @include adaptiveValue("height", 699, 266);
+            position: absolute;
+            right: -17%;
+            top: 99px;
+            border-radius: 100%;
+            z-index: -1;
+            @media (max-width: 960px){
+                filter: blur(75px);
+            }
+         
+        }
         @media (max-width: 960px) {
             background-position: 0 150px;
-        }
-        svg {
-            position: absolute;
-            right: -300px;
-            top: 0;
-            z-index: -1;
-            @media (max-width: 960px) {
-                width: 700px;
-                right: -250px;
-                top: -250px;
-                opacity: 0.7;
-            }
         }
     }
     &__sub-title {
@@ -41,17 +45,17 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
         }
-        @media (max-width: 767px){
-            a:nth-child(1){
+        @media (max-width: 767px) {
+            a:nth-child(1) {
                 margin-left: -35px;
             }
-            a:nth-child(4){
+            a:nth-child(4) {
                 margin-left: -35px;
             }
-            a:nth-child(3){
+            a:nth-child(3) {
                 margin-right: -35px;
             }
-            a:nth-child(6){
+            a:nth-child(6) {
                 margin-right: -35px;
             }
         }
@@ -124,7 +128,7 @@
     margin: 0 auto;
 }
 .content {
-   width: calc(100% + 200px);
+    width: calc(100% + 200px);
     height: 300px;
     background-color: red;
     margin: 0 -100px;

@@ -140,6 +140,13 @@
         align-items: center;
         @include adaptiveValue("padding-top", 142, 30);
         @include adaptiveValue("padding-bottom", 147, 50);
+        background-image: url(../img/partners/logo-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        
     }
     &__subtitle {
         font-weight: 700;
@@ -151,7 +158,7 @@
         display: flex;
         flex-direction: column;
         &::before {
-            content: "fffff";
+            content: "";
             background: rgba(10, 148, 226, 0.5);
             filter: blur(187.5px);
             @include adaptiveValue("width", 699, 254);
