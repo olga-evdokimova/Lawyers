@@ -1,34 +1,7 @@
 .services {
-    max-width: 1440px;
-    margin: 20px auto;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 35px;
-    background-color: $mainColor;
-    position: relative;
-    @include adaptiveValue("padding-bottom", 100, 25);
-    @include adaptiveValue("padding-top", 100, 25);
-    @media (max-width: 960px) {
-        border-radius: 20px;
-    }
-    @media (max-width: 767px) {
-        border-radius: 15px;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/partners/bg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 35px;
-        opacity: 0.2;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-         @media (max-width: 767px) {
-        border-radius: 15px;
-    }
+    margin-top: 40px;
+    @media (max-width: 960px){
+        margin-top: 30px;
     }
     &__title {
         color: $color;
