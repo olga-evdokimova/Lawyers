@@ -7,21 +7,78 @@
     &__title {
     }
     &__subtitle {
-        margin-bottom: 57px;
         z-index: 2;
     }
     &__items {
+        margin: 57px 0;
+        @media (max-width: 660px) {
+            margin: 24px 0 0 0;
+        }
     }
     &__item {
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 100px 0 55px;
+        &:not(:last-child) {
+            border-bottom: 1px solid #dadada;
+        }
+        @media (max-width: 960px) {
+            margin: 0;
+        }
+        @media (max-width: 660px) {
+            height: 107px;
+        }
     }
     &__btn-watch {
+        @include adaptiveValue("font-size", 40, 30);
+        transition: all 0.2s ease 0s;
+        @media (max-width: 660px) {
+            order: 1;
+            margin-right: 24px;
+        }
+        &:hover {
+            transform: scale(1.2);
+            transition: all 0.2s ease 0s;
+        }
     }
     &__text {
         color: $color;
-        z-index: 3;
+        @include adaptiveValue("font-size", 22, 12);
+        font-weight: 600;
+        padding: 0 23px;
+        @media (max-width: 660px) {
+            padding: 0 10px;
+        }
     }
     &__btn-donload {
+        padding-right: 7px;
+        @include adaptiveValue("font-size", 14, 10);
+        color: rgba(7, 0, 44, 0.3);
+        transition: all 0.2s ease 0s;
+        position: relative;
+        span {
+            position: absolute;
+            left: -7px;
+        }
+        @media (max-width: 660px) {
+            order: 2;
+        }
+        &:hover {
+            color: $color;
+            transition: all 0.2s ease 0s;
+        }
+        &::before {
+            @include adaptiveValue("font-size", 40, 30);
+            color: $color;
+        }
     }
     &__more {
+        text-align: end;
+        margin: 0;
+        @media (max-width: 660px) {
+            text-align: center;
+        }
     }
 }
