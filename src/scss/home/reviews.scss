@@ -1,0 +1,126 @@
+.reviews {
+    margin-top: 40px;
+    @media (max-width: 960px) {
+        margin-top: 30px;
+    }
+    &__title {
+        color: $color;
+    }
+    &__content {
+        position: relative;
+    }
+    &__slider {
+        width: 100%;
+        height: 500px;
+        @media (max-width: 768px) {
+            width: calc(100% + 30px);
+            margin: 0 -15px !important;
+        }
+        @media (max-width: 560px) {
+            height: 260px;
+        }
+    }
+    &__wrapper {
+    }
+    &__slide {
+        position: relative;
+        img {
+            width: 189px;
+            height: 384px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @media (max-width: 560px) {
+                width: 99px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    margin: 7px;
+    border-radius: 100%;
+    background-color: $mainColor;
+    opacity: 1;
+    @media (max-width: 560px) {
+        width: 10px;
+        height: 10px;
+    }
+}
+.swiper-pagination-bullet-active {
+    width: 17px;
+    height: 17px;
+    background-color: $color;
+    @media (max-width: 560px) {
+        width: 12px;
+        height: 12px;
+    }
+}
+.swiper-button-prev {
+    left: 0;
+    &::before {
+        content: "";
+        top: 35%;
+        left: 45%;
+        border-top: 2px solid $color;
+        border-left: 2px solid $color;
+        transform: rotate(-45deg);
+    }
+}
+.swiper-button-next {
+    right: 0;
+    &::before {
+        content: "";
+        top: 35%;
+        left: 30%;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+        transform: rotate(45deg);
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+    width: 70px;
+    height: 70px;
+    background-color: $mainColor;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 50%;
+    @media (max-width: 1080px) {
+        bottom: 0;
+    }
+    @media (max-width: 560px) {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+        @media (max-width: 560px) {
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+.swiper-slide {
+    transition: 0.5s;
+}
+
+.swiper-slide-active {
+    transform: scale(1.3) !important;
+}
