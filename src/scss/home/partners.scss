@@ -1,36 +1,4 @@
 .partners {
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 35px;
-    background-color: $mainColor;
-    position: relative;
-    @include adaptiveValue("padding-bottom", 100, 25);
-    @include adaptiveValue("padding-top", 100, 25);
-
-    @media (max-width: 960px) {
-        border-radius: 20px;
-    }
-    @media (max-width: 767px) {
-        border-radius: 15px;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/partners/bg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 35px;
-        opacity: 0.2;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-         @media (max-width: 767px) {
-        border-radius: 15px;
-    }
-    }
     &__images {
         @media (max-width: 960px) {
             display: none;
@@ -149,7 +117,6 @@
         background-position: bottom;
         width: 100%;
         height: 100%;
-        
     }
     &__subtitle {
         font-weight: 700;
@@ -249,29 +216,6 @@
         }
     }
     &__more {
-        font-weight: 700;
-        @include adaptiveValue("font-size", 29, 14);
-        color: $color;
-        @include adaptiveValue("margin-top", 73, 50);
         text-align: center;
-
-        a {
-            position: relative;
-            z-index: 2;
-            @include adaptiveValue("padding-right", 70, 40);
-            &:hover {
-                &::before {
-                    transform: translateX(10px);
-                    transition: all 0.2s ease 0s;
-                }
-            }
-        }
-        a::before {
-            @include adaptiveValue("font-size", 54, 30);
-            position: absolute;
-            right: 0;
-            top: -6px;
-            transition: all 0.2s ease 0s;
-        }
     }
 }

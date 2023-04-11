@@ -1,0 +1,27 @@
+.documents {
+    margin-top: 40px;
+    @media (max-width: 960px) {
+        margin-top: 30px;
+    }
+    color: $color;
+    &__title {
+    }
+    &__subtitle {
+        margin-bottom: 57px;
+        z-index: 2;
+    }
+    &__items {
+    }
+    &__item {
+    }
+    &__btn-watch {
+    }
+    &__text {
+        color: $color;
+        z-index: 3;
+    }
+    &__btn-donload {
+    }
+    &__more {
+    }
+}

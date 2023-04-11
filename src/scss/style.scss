@@ -107,14 +107,14 @@ body {
 	position: relative;
 	@include adaptiveValue("padding-bottom", 100, 25);
 	@include adaptiveValue("padding-top", 100, 25);
-
 	@media (max-width: 960px) {
 		border-radius: 20px;
 	}
 	@media (max-width: 767px) {
 		border-radius: 15px;
 	}
-	&::after {
+	z-index: 1;
+	&::before {
 		content: "";
 		position: absolute;
 		background-image: url(../img/partners/bg.jpg);
@@ -126,9 +126,33 @@ body {
 		left: 0;
 		bottom: 0;
 		right: 0;
+		z-index: -1;
 		@media (max-width: 767px) {
 			border-radius: 15px;
 		}
+	}
+}
+.more {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 29, 14);
+	color: $color;
+	@include adaptiveValue("margin-top", 73, 50);
+	a {
+		position: relative;
+		@include adaptiveValue("padding-right", 70, 40);
+		&:hover {
+			&::before {
+				transform: translateX(10px);
+				transition: all 0.2s ease 0s;
+			}
+		}
+	}
+	a::before {
+		@include adaptiveValue("font-size", 54, 30);
+		position: absolute;
+		right: 0;
+		top: -6px;
+		transition: all 0.2s ease 0s;
 	}
 }
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -190,7 +214,8 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "first";
-@import "contacts";
-@import "partners";
-@import "services";
+@import "home/first";
+@import "home/contacts";
+@import "home/partners";
+@import "home/services";
+@import "home/documents";
