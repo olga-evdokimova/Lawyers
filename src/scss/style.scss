@@ -105,7 +105,7 @@ body {
 	border-radius: 35px;
 	background-color: $mainColor;
 	position: relative;
-	@include adaptiveValue("padding-bottom", 100, 25);
+	@include adaptiveValue("padding-bottom", 100, 50);
 	@include adaptiveValue("padding-top", 100, 25);
 	@media (max-width: 960px) {
 		border-radius: 20px;
