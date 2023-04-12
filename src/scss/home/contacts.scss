@@ -18,14 +18,16 @@
             top: 99px;
             border-radius: 100%;
             z-index: -1;
-            @media (max-width: 960px){
+            @media (max-width: 960px) {
                 filter: blur(75px);
             }
-         
         }
         @media (max-width: 960px) {
             background-position: 0 150px;
         }
+    }
+    &__title {
+        color: $mainColor;
     }
     &__sub-title {
         text-align: center;
