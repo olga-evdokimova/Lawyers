@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230412101417">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230414214846">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,18 +22,18 @@
 				<button type="button" class="icon-menu"><span></span></button>
 				<nav class="nav">
 					<ul class="nav__list block">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">О партнёрстве</a><span class="dropdown _icon-form-drop-down"></span>
+						<li class="nav__list-item"><a href="#">Главная</a></li>
+						<li class="nav__list-item"><a href="#">О партнёрстве</a><span class="dropdown _icon-form-drop-down"></span>
 							<ul class="sub-nav__list dropdown-list">
 								<li class="sub-nav__item" data-da=".block,1140,2"><a href="#" class="sub-nav__link">Дипломы</a>
 								</li>
 								<li class="sub-nav__item" data-da=".block,1140,2"><a href="#" class="sub-nav__link">Документы</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Мероприятия</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li class="nav__list-item"><a href="#">Услуги</a></li>
+						<li class="nav__list-item"><a href="#">Мероприятия</a></li>
+						<li class="nav__list-item"><a href="#">Отзывы</a></li>
+						<li class="nav__list-item"><a href="#">Контакты</a></li>
 						<a class="nav__policy" href="#">Политика конфиденциальности</a>
 						<div class="nav__copy">© 2023</div>
 					</ul>
@@ -210,10 +210,75 @@
 					</div>
 				</div>
 			</section>
+			<section class="consultation bg">
+				<div class="__container">
+					<h2 class="consultation__title title">Остались вопросы или нужна консультация?</h2>
+					<h4 class="consultation__subtitle title-03">Заполните форму и мы с Вами свяжемся через 20 минут</h4>
+					<div class="consultation__content">
+						<div class="form">
+							<div class="form__title">Выберите ваш вопрос</div>
+							<div class="form__select">
+								<form action="">
+									<div class="__select" data-state="">
+										<div class="__select__title" data-default="Option 0">Юридическая помощь в сфере недвижимости
+										</div>
+										<div class="__select__content">
+											<input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect0" class="__select__label">Юридическая помощь в сфере
+												недвижимости</label>
+											<input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect0" class="__select__label">Юридические услуги в сфере семейного
+												права</label>
+											<input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect1" class="__select__label">Юридические услуги в ивент и бьюти
+												сфере</label>
+											<input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect2" class="__select__label">Защита интеллектуальной
+												собственности</label>
+											<input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect3" class="__select__label">Абонентское обслуживание ИП и
+												юридических лиц</label>
+											<input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect4" class="__select__label">Досудебное (медиация) и судебное
+												разрешение споров</label>
+											<input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
+											<label for="singleSelect5" class="__select__label">Другое</label>
+
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="form__body">
+								<div class="form__item">
+									<label class="form__label" for="username"></label>
+									<input class="form__input" placeholder="Имя" id="username" name="username" type="text">
+								</div>
+								<div class="form__item">
+									<label class="form__label" for="phone"></label>
+									<input class="form__input" placeholder="Телефон" id="phone" name="phone" type="tel">
+								</div>
+								<div class="form__item">
+									<label class="form__label" for="email"></label>
+									<input class="form__input" placeholder="E-mail" id="email" name="email" type="email">
+								</div>
+								<button class="form__submit" type="submit">
+									Задать вопрос
+								</button>
+								<div class="form__checkbox">
+									<input class="form__checkbox-custom" type="checkbox" name="check" value="" id="happy" />
+									<label for="happy">Я ознакомлен (-а) с</label>
+									<a href="#">политикой конфиденциальности</a>
+								</div>
+							</div>
+						</div>
+						<div class="consultation__image"><picture><source srcset="img/consultation/1.webp" type="image/webp"><img src="img/consultation/1.png" alt=""></picture></div>
+					</div>
+				</div>
+			</section>
 
 			<section class="contacts">
 				<div class="contacts__wrap __container">
-					<h2 class="title">Контакты</h2>
+					<h2 class="contacts__title title">Контакты</h2>
 					<h4 class="contacts__sub-title title-03">Напишите нам напрямую в социальных сетях</h4>
 					<div class="contacts__social">
 						<a href="#" class="telephone contacts__social-item"></a>
@@ -257,7 +322,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20230412101417"></script>
+	<script src="js/app.min.js?_v=20230414214846"></script>
 </body>
 
 </html>
