@@ -30,9 +30,16 @@
         width: 524px;
         height: 700px;
         position: relative;
+        @media (max-width: 1040px) {
+            width: 430px;
+            height: 700px;
+        }
         @media (max-width: 959px) {
-            height: 755px;
-            padding-top: 100px;
+            margin-top: 78px;
+        }
+        @media (max-width: 767px) {
+            width: 300px;
+            height: 492px;
         }
         &::before {
             content: "";
@@ -41,15 +48,23 @@
             @include adaptiveValue("width", 683, 315);
             @include adaptiveValue("height", 683, 315);
             position: absolute;
-            right: -76px;
+            left: 50%;
+            transform: translateX(-50%);
             top: -56px;
             border-radius: 100%;
             z-index: -1;
         }
         img {
-            object-fit: cover;
-            @include adaptiveValue("width", 524, 230);
-            @media (max-width: 959px) {
+            // object-fit: cover;
+            width: 524px;
+
+            @media (max-width: 1040px) {
+                width: 430px;
+            }
+            @media (max-width: 960px) {
+            }
+            @media (max-width: 767px) {
+                width: 300px;
             }
         }
     }
@@ -67,7 +82,7 @@
         width: 290px;
         height: 380px;
         padding: 20px;
-          border-radius: 10px;
+        border-radius: 10px;
     }
     &__title {
         font-size: 18px;
@@ -137,7 +152,7 @@
         font-weight: 600;
         display: flex;
         align-items: center;
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             flex-direction: column;
         }
         &-custom {
@@ -149,8 +164,7 @@
             display: flex;
             align-items: center;
             user-select: none;
-            @media (max-width: 767px){
-               
+            @media (max-width: 767px) {
             }
         }
         &-custom + label::before {
@@ -164,7 +178,7 @@
             @media (max-width: 767px) {
                 width: 20px;
                 height: 20px;
-               margin-right: 10px;
+                margin-right: 10px;
                 border: 1px solid #074888;
             }
         }
@@ -179,7 +193,7 @@
         }
         a {
             margin: 2px 0 0 4px;
-              border-bottom: 1px solid $color;
+            border-bottom: 1px solid $color;
             transition: all 0.2s ease 0s;
             &:hover {
                 // transform: scale(1.1);
@@ -234,7 +248,7 @@
         padding: 0 30px 0 10px;
         width: 250px;
         margin: 0;
-         border-bottom: 1px solid $color;
+        border-bottom: 1px solid $color;
     }
     &::before,
     &::after {
@@ -300,7 +314,7 @@
         width: 270px;
         height: 190px;
         padding-bottom: 10px;
-         border-radius: 0px 0px 10px 10px;
+        border-radius: 0px 0px 10px 10px;
     }
 }
 .__select__input {
