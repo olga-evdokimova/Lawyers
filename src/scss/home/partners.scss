@@ -109,10 +109,10 @@
         align-items: center;
         @include adaptiveValue("padding-top", 142, 30);
         @include adaptiveValue("padding-bottom", 147, 50);
-        background-image: url(../img/partners/logo-bg.svg);
+        background-image: url(../img/partners/logo-bg.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: center 97%;
         width: 100%;
         height: 100%;
     }
