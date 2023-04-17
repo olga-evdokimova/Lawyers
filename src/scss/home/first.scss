@@ -5,12 +5,12 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-          &::before {
+        &::before {
             content: "";
             position: absolute;
             @include adaptiveValue("width", 586, 300);
             @include adaptiveValue("height", 586, 300);
-            left:6px;
+            left: 6px;
             top: 41px;
             background: rgba(10, 148, 226, 0.8);
             filter: blur(88.5px);
@@ -62,21 +62,18 @@
         }
     }
     &__list {
-        @include adaptiveValue("padding-top", 47, 14);
+        @include adaptiveValue("padding-top", 39, 37);
         @include adaptiveValue("padding-bottom", 60, 30);
         @include adaptiveValue("padding-left", 60, -80);
-        background-image: url(../img/first/logo-bg.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 0 80px;
-        @media (max-width: 960px) {
-            padding: 24px 0 30px 0px;
-        }
         li {
             padding-left: 60px;
             padding-bottom: 31px;
             position: relative;
             @include adaptiveValue("font-size", 18, 5);
+            font-weight: 600;
             &::before {
                 position: absolute;
                 left: 0;
@@ -95,7 +92,6 @@
                     font-size: 19px;
                 }
             }
-            font-weight: 600;
         }
     }
     &__btn {

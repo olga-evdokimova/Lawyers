@@ -3,15 +3,21 @@
     @media (max-width: 960px) {
         margin-top: 30px;
     }
-      background-image: url(../img/partners/logo-bg.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center 15% ;
+    &.bg {
+       padding-top: 0 !important;
+    }
     &__title {
-   
+          @include adaptiveValue("padding-bottom", 126, 48);
     }
     &__content {
+        @include adaptiveValue("padding-top", 100, 25);
         position: relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 16%;
+        @media (max-width: 767px){
+            background-image: none;
+        }
     }
     &__slider {
         width: 100%;
@@ -78,7 +84,7 @@
     background-color: $mainColor;
     border-radius: 15px;
     position: absolute;
-    bottom: 50%;
+    bottom: 34%;
     @media (max-width: 1080px) {
         bottom: -20px;
     }
@@ -86,7 +92,7 @@
         width: 40px;
         height: 40px;
         border-radius: 5px;
-         bottom: -7px;
+        bottom: -7px;
     }
     &::before {
         content: "";
