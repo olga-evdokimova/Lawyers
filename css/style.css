@@ -1344,7 +1344,7 @@ body {
   filter: blur(50px);
   z-index: 4;
 }
-.partners__images > img:nth-child(1) {
+.partners__images-01 {
   max-width: 428px;
   position: absolute;
   left: -75px;
@@ -1352,12 +1352,12 @@ body {
   z-index: 3;
 }
 @media (max-width: 1200px) {
-  .partners__images > img:nth-child(1) {
+  .partners__images-01 {
     left: -135px;
     max-width: 400px;
   }
 }
-.partners__images > img:nth-child(2) {
+.partners__images-02 {
   max-width: 600px;
   position: absolute;
   right: -160px;
@@ -1365,7 +1365,7 @@ body {
   z-index: 3;
 }
 @media (max-width: 1200px) {
-  .partners__images > img:nth-child(2) {
+  .partners__images-02 {
     max-width: 560px;
   }
 }
