@@ -27,7 +27,7 @@
             filter: blur(50px);
             z-index: 4;
         }
-        img:nth-child(1) {
+       > img:nth-child(1) {
             max-width: 428px;
             position: absolute;
             left: -75px;
@@ -38,7 +38,7 @@
                 max-width: 400px;
             }
         }
-        img:nth-child(2) {
+       > img:nth-child(2) {
             max-width: 600px;
             position: absolute;
             right: -160px;
